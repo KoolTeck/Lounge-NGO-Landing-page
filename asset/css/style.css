@@ -1002,6 +1002,15 @@ div.parent{
     }
 }
 
+@media screen and (max-width:385px){
+    #mission {
+        padding: 10px;
+        height: auto;
+    }
+}
+
+
+
 
 
 @media screen and (max-width:270px) {
