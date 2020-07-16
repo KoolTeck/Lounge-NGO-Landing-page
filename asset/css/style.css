@@ -319,6 +319,10 @@ div.parent{
     width: 136px;
     height: 45px;
 }
+
+#upper-home a{
+    text-decoration: none;
+}
 /* suggestion/donate */
 #suggest-donate{
     height: 702px;
@@ -744,6 +748,10 @@ div.parent{
         width: unset;
     }
 
+    #upper-home button.btn.btn-danger {
+        margin-bottom: 40px;
+    }
+
     #contact span a button.btn{
         font-size: 30px;
     }
@@ -788,7 +796,7 @@ div.parent{
     }
 
     #upper-home div.background {
-        height: 680px;
+        height: auto;
     }
 
     #suggest-donate {
@@ -811,7 +819,40 @@ div.parent{
     margin-bottom: 20px;
 }
 
+#contact a button.btn {
+    width: 50%;
+    height: 60px;
+    margin-bottom: 20px;
 }
+
+
+}
+
+@media screen and (max-width: 881px) {
+    #contact .form-inline button.btn {
+        margin: 0;
+        width: unset;
+        font-size: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #contact a button.btn {
+        width: 50%;
+        height: 60px;
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #upper-home div.background {
+        height: 490px;
+    }
+}
+
+
 
 @media screen and (max-width: 570px) {
     #suggest-donate div.suggest {
@@ -938,6 +979,30 @@ div.parent{
     }
 
 }
+
+@media screen and (max-width:460px){
+    #projects div.text {
+        padding: 10px;
+    }
+
+    #contact > div > div > div:nth-child(1){
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width:460px){
+    #contact p {
+        font-size: 15px;
+    }
+
+    #contact a button.btn {
+        height: 50px;
+        font-size: 13px;
+        line-height: 15px;
+    }
+}
+
+
 
 @media screen and (max-width:270px) {
     #upper-home h1 {
