@@ -19,7 +19,7 @@ body{
     --light-blue: #24116a;
     --pink: #084482;
     --green: #2c5530;
-    --transition: all 0.5s linear;
+    --transition: all 0.3s ease-in;
     --radius: 5px;
     --max-width: 1170px;
     --spacing: 0.10rem;
@@ -117,6 +117,10 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0 .4rem;
 }
 
+.logo-container a{
+    text-decoration: none;
+}
+
 .logo{
     height: 50px;
 }
@@ -132,6 +136,14 @@ h1, h2, h3, h4, h5, h6, p{
     height: 0;
     overflow: hidden;
     transition: var(--transition);
+}
+
+.links-container a.active{
+    border-bottom: 2px solid var(--black) ;
+}
+
+.links-container a.active:hover{
+
 }
 
 .show-links{
@@ -156,7 +168,7 @@ h1, h2, h3, h4, h5, h6, p{
 .links a:hover{
     color: var(--navy-blue);
     background-color: transparent;
-    padding-left: 1rem;
+    padding-left: .4rem;
 }
 
 .button-container{
@@ -165,7 +177,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .btn{
     padding: 0.4rem;
-    border: none;
+    /* border: none; */
     background-color: #d8315b;
     border-radius: var(--radius);
     cursor: pointer;
@@ -177,7 +189,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .btn:hover{
-   border: 2px solid #d8315b;
+   border: 1px solid #d8315b;
     background-color: transparent;
     color: #d8315b;
 }
@@ -253,7 +265,7 @@ div.parent{
     }
 
     .btn:hover{
-        border: 2px solid #d8315b;
+        border: 1px solid #d8315b;
         background-color: transparent;
         color: #d8315b;
     }
@@ -312,12 +324,13 @@ div.parent{
 #upper-home button.btn.btn-danger{
     font-weight: bold;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 20px;
     color: #FFFFFF;
-    text-align: left;
+    padding: 0;
+    text-align: center;
     margin: 0 ;
     width: 136px;
-    height: 45px;
+    height: 50px;
 }
 
 #upper-home a{
@@ -334,7 +347,6 @@ div.parent{
     background-size: cover;
     height: 702px;
     background:linear-gradient( rgba(62, 146, 204, 0.7)50%, rgba(62, 146, 204, 0.7)50%),url("../imgs/Rectangle\ 448.png");
-    z-index: -50;
 }
 
 #suggest-donate p{
@@ -353,16 +365,19 @@ div.parent{
     background-size: cover;
     height: 702px;
     background:linear-gradient( rgba(216, 49, 91, 0.7)50%, rgba(216, 49, 91,0.7)50%),url("../imgs/Rectangle\ 449.png");
-    z-index: -50;
 }
 
-#suggest-donate p{
-    background-image: url(../imgs/Ellipse\ 62.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 25%;
+#suggest-donate a{
+   text-decoration: none;
+   color: #FFFFFF;
 }
 
+#suggest-donate a:hover{
+    transition: var(--transition);
+    font-size: 52px;
+}
+
+/* mission section */
 #mission{
     background-position: center;
     background-repeat: no-repeat;
@@ -434,8 +449,8 @@ div.parent{
     width: 304px;
     height: 76px;
     text-align: center;
-    margin-left: 280px;
-    margin-top: 10px;
+    margin-left: 310px;
+    margin-top: 40px;
 }
 
 #projects h3 {
@@ -469,9 +484,6 @@ div.parent{
     /* margin-top: 100px; */
 }
 
-.modal-body{
-    background-color: #d8315b;
-}
 
 .carousel-indicators li {
     background-clip: unset;
@@ -516,8 +528,16 @@ div.parent{
 
 #contact a button.btn{
     margin: 0;
-    width: 330px;
-    height: 45px;
+    width: 260px;
+    height: 80px;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#contact a button:hover{
+    background-color: rgb(200, 21, 21);
+    color: #FFFFFF;
 }
 #contact .form-inline{
     width: 100%;
@@ -559,19 +579,19 @@ div.parent{
 }
 
 #contact span a button.btn{
-    width: 100%;
-    height: 105px;
-    left: 730px;
-    top: 3144px;
+    width: 60%;
+    height: 80px;
     background: #D8315B;
     font-weight: bold;
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 30px;
+    line-height: 30px;
     margin-top: 20px;
+    outline: none;
 }
 
 #contact span a button.btn:hover{
-    background: transparent;
+    background-color:rgb(200, 21, 21) ;
+    color: #f1f5f8;
 }
 
 .footer{
@@ -684,6 +704,39 @@ div.parent{
     font-size: 0.7rem;
 }
 
+@media screen and (max-width: 1200px){
+    dl, ol, ul {
+        margin-bottom: 0;
+    }
+
+    .links a {
+        font-size: 14px;
+        margin: 9px;
+        padding: 0;
+    }
+
+    #projects h2 {
+        margin-left: 210px;
+    }
+}
+
+@media screen and (max-width: 1060px){
+    #contact span a button.btn {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    
+    .links a {
+        margin: 5px;
+    }
+
+}
+
+
+
+
 @media screen and (max-width: 1000px){
     .footer-center{
         display: block;
@@ -719,19 +772,7 @@ div.parent{
         display: unset;
     }
 
-    body > div > nav > div > div.links-container.show-links > ul > li.button-container > button:nth-child(1){
-        margin: 0 auto;
-        padding: 0.2rem;
-        font-size: 15px; 
-    }
-
-    
-    body > div > nav > div > div.links-container.show-links > ul > li.button-container > button:nth-child(2){
-        margin: 0 auto;
-        padding: 0.1rem;
-        font-size: 15px;        
-    }
-
+   
     #projects{
         height: auto;
     }
@@ -753,7 +794,7 @@ div.parent{
     }
 
     #contact span a button.btn{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     #upper-home div.container{
@@ -770,6 +811,11 @@ div.parent{
 
     #upper-home h1{
         padding-top: 50px;
+    }
+
+    .links a {
+        margin: 20px;
+        font-size: 18px;
     }
 }
 
@@ -825,17 +871,41 @@ div.parent{
     margin-bottom: 20px;
 }
 
+#contact .form-inline button.btn {
+    width: 30%;
+    font-size: 13px;
+}
+
 
 }
 
-@media screen and (max-width: 881px) {
+
+@media screen and (max-width: 886px) {
     #contact .form-inline button.btn {
-        margin: 0;
-        width: unset;
-        font-size: 10px;
-        padding: 10px;
+        width: 70px;
+        font-size: 13px;
+        /* margin: 0 auto; */
+    }
+    
+    #contact .form-inline h2{
+        text-align: center;
     }
 }
+
+@media screen and (max-width: 880px) {
+    
+#contact .form-inline button.btn {
+    width: 60%;
+    font-size: 13px;
+    margin: 0 auto;
+}
+
+#contact a button.btn {
+    font-size: 12px;
+    padding: 2px;
+}
+}
+
 
 @media screen and (max-width: 840px) {
     #contact a button.btn {
@@ -844,11 +914,19 @@ div.parent{
         font-size: 12px;
         margin-bottom: 0px;
     }
+
+    
 }
 
 @media screen and (max-width: 770px) {
     #upper-home div.background {
         height: 490px;
+    }
+
+    #contact .form-inline h2 {
+        text-align: center;
+        margin: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -980,6 +1058,26 @@ div.parent{
 
 }
 
+@media screen and (max-width:590px){
+    #contact a button.btn {
+        margin-bottom: 20px;
+    }
+
+    #contact .form-inline button.btn {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    #contact span a button.btn {
+        width: 100%;
+        height: 70px;
+        font-size: 20px;
+        line-height: unset;
+    }
+
+}
+
+
 @media screen and (max-width:460px){
     #projects div.text {
         padding: 10px;
@@ -1000,6 +1098,19 @@ div.parent{
         font-size: 13px;
         line-height: 15px;
     }
+
+    #contact .form-inline {
+        display: inline-grid;
+        padding: 20px;
+    }
+
+    #contact .form-inline button.btn {
+        padding: 10px;
+    }
+
+    #contact .form-inline h2 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width:385px){
@@ -1007,6 +1118,19 @@ div.parent{
         padding: 10px;
         height: auto;
     }
+
+    #contact .form-inline h2 {
+        text-align: center;
+        margin: 0px;
+        padding-top: 0px;
+        font-size: 12px;
+    }
+
+    #contact .form-inline button.btn {
+        padding: 4px;
+        width: 60%;
+    }
+
 }
 
 
@@ -1110,6 +1234,8 @@ div.parent{
     .social-media>* {
         margin: 2px;
     }
+
+    
 }
 
 
